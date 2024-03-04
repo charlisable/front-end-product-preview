@@ -1,0 +1,151 @@
+html { box-sizing: border-box; }
+
+*, *:before, *:after { box-sizing: inherit; }
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --dark-blue: hsl(212, 21%, 14%);
+    --grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    height: 100vh;
+    background-color: var(--cream);
+
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-size: 14px;
+}
+
+.card {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 400px;
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+/* top image */
+picture, img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* text */
+h1 {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--grayish-blue);
+}
+
+h2 {
+    color: var(--dark-blue);
+}
+h2, .bold {
+    font-family: 'Fraunces';
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+    margin: 10px 0px;
+}
+.bold {
+    color: var(--dark-cyan);
+}
+
+p {
+    line-height: 23px;
+    font-weight: 500;
+    color: var(--grayish-blue);
+}
+
+
+.text-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* price text */
+.price-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* button */
+.cart-btn {
+    width: 100%;
+    max-width: 400px;
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--dark-cyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
+.cart-btn:hover {
+    background-color: hsl(158, 35%, 22%);
+}
+
+.cart-btn p {
+    color: var(--white);
+    font-weight: 700;
+}
+
+.cart-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+a {
+    width: 100%;
+    text-decoration: none;
+}
+
+.old-price {
+    text-decoration: line-through;
+}
+
+
+
+/* media queries */
+@media screen and (min-width:650px) {
+    .card {
+        display: flex;
+        max-width: 650px;
+    }
+
+    .text-container, .img-container {
+        width: 50%;
+    }
+
+    .text-container {
+        padding: 30px;
+        justify-content: space-between;
+    }
+
+    h2, .bold {
+        font-size: 36px;
+        margin: 0;
+    }
+
+    p, h1 {
+        font-size: 16px;
+        margin: 0;
+    }
+
+}
